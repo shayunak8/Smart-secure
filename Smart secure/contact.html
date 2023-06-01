@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/x-icon" href="img/camicon.png" />
+    <title>Contact creator</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/title.css" />
+    <style>
+      body {
+        background-image: url("https://media.istockphoto.com/photos/-picture-id1311934969?k=20&m=1311934969&s=612x612&w=0&h=ftaxrSpkUB_ftSu-Zcxp44C1pBpxntMzNFjf5rcXPkw=");
+
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">Smart secure</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              The site <span class="caret"></span
+            ></a>
+            <ul class="dropdown-menu">
+              <li><a href="about the site.html">About the site</a></li>
+              <li><a href="about creator.html">About creator</a></li>
+              <li class="active"><a href="contact.html">Contact creator</a></li>
+            </ul>
+          </li>
+          <li id="iotNavItem"><a href="IOT.html">IOT</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a id="clock"></a></li>
+          <script>
+            startTime();
+            function startTime() {
+              const today = new Date();
+              let h = today.getHours();
+              let m = today.getMinutes();
+              let s = today.getSeconds();
+              m = checkTime(m);
+              s = checkTime(s);
+              document.getElementById("clock").innerHTML =
+                h + ":" + m + ":" + s;
+              setTimeout(startTime, 1000);
+            }
+            function checkTime(i) {
+              if (i < 10) {
+                i = "0" + i;
+              } // add zero in front of numbers < 10
+              return i;
+            }
+          </script>
+          <li id="welcomeMessage" style="display: none; font-weight: 900">
+            <a href="#">Welcome <span id="usernameDisplay"></span></a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li id="signUpLink">
+            <a href="sign up.html"
+              ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+            >
+          </li>
+          <li id="signInLink">
+            <a href="sign in.html"
+              ><span class="glyphicon glyphicon-log-in"></span> Sign in</a
+            >
+          </li>
+          <li id="logoutLink" style="display: none">
+            <a href="#"
+              ><span class="glyphicon glyphicon-log-out"></span> Logout</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <center>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h1 class="animate-charcter">Contact creator</h1>
+          </div>
+        </div>
+      </div>
+    </center>
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center mb-5">
+            <h2 class="heading-section"></h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-10 col-md-12">
+            <div class="wrapper">
+              <div class="row no-gutters">
+                <div class="col-md-7 d-flex align-items-stretch">
+                  <div class="contact-wrap w-100 p-md-5 p-4">
+                    <h3 class="mb-4">Get in touch</h3>
+                    <div id="form-message-warning" class="mb-4"></div>
+                    <div id="form-message-success" class="mb-4">
+                      Your message was sent, thank you!
+                    </div>
+                    <form id="contactForm" name="contactForm">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="name"
+                              id="name"
+                              placeholder="Name"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <input
+                              type="email"
+                              class="form-control"
+                              name="email"
+                              id="email"
+                              placeholder="Email"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="subject"
+                              id="subject"
+                              placeholder="Subject"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <textarea
+                              name="message"
+                              class="form-control"
+                              id="message"
+                              cols="30"
+                              rows="7"
+                              placeholder="Message"
+                            ></textarea>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div>
+                            <button id="submit" class="cssbuttons-io-button">
+                              Send message
+                              <div class="icon">
+                                <svg
+                                  height="24"
+                                  width="24"
+                                  viewBox="0 0 24 24"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path fill="none"></path>
+                                  <path
+                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                    fill="currentColor"
+                                  ></path>
+                                </svg>
+                              </div>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-md-5 d-flex align-items-stretch">
+                  <div class="info-wrap bg-primary w-100 p-lg-5 p-4">
+                    <h3 class="mb-4 mt-md-4">Contact us</h3>
+                    <div class="dbox w-100 d-flex align-items-start">
+                      <div
+                        class="icon d-flex align-items-center justify-content-center"
+                      >
+                        <span class="fa fa-map-marker"></span>
+                      </div>
+                      <div class="text pl-3">
+                        <p><span>Address:</span> Kinneret Collage</p>
+                      </div>
+                    </div>
+                    <div class="dbox w-100 d-flex align-items-center">
+                      <div
+                        class="icon d-flex align-items-center justify-content-center"
+                      >
+                        <span class="fa fa-phone"></span>
+                      </div>
+                      <div class="text pl-3">
+                        <p>
+                          <span>Phone:</span>
+                          <a href="tel://0585200321">+972 585200321</a>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="dbox w-100 d-flex align-items-center">
+                      <div
+                        class="icon d-flex align-items-center justify-content-center"
+                      >
+                        <span class="fa fa-paper-plane"></span>
+                      </div>
+                      <div class="text pl-3">
+                        <p>
+                          <span>Email:</span>
+                          <a
+                            href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMVkmhkvPWscjszTRjrWqrgNjmLgkHVXVfPnrlchWTPMkcgQzKjcbZvqkvNPxcffKJcDzDz"
+                            >info@smartsecure.com</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                    <div class="dbox w-100 d-flex align-items-center">
+                      <div
+                        class="icon d-flex align-items-center justify-content-center"
+                      >
+                        <span class="fa fa-globe"></span>
+                      </div>
+                      <div class="text pl-3">
+                        <p>
+                          <span>Website</span>
+                          <a href="index.html">smartsecure.com</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyCKccNAw3hgB3vGN7x47RRFgd2iY5iLNLU",
+        authDomain: "final-project-b3ef7.firebaseapp.com",
+        databaseURL:
+          "https://final-project-b3ef7-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "final-project-b3ef7",
+        storageBucket: "final-project-b3ef7.appspot.com",
+        messagingSenderId: "780470933521",
+        appId: "1:780470933521:web:a70f06dad316104666b9b0",
+        measurementId: "G-QEFRN4MGPN",
+      };
+
+      firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth();
+      const database = firebase.database();
+      var signUpLink = document.getElementById("signUpLink");
+      var signInLink = document.getElementById("signInLink");
+      var logoutLink = document.getElementById("logoutLink");
+      var iotNavItem = document.getElementById("iotNavItem");
+      var welcomeMessage = document.getElementById("welcomeMessage");
+
+      firebase.auth().onAuthStateChanged(async (user) => {
+        if (user) {
+          // User is signed in
+          signUpLink.style.display = "none";
+          signInLink.style.display = "none";
+          logoutLink.style.display = "block";
+          iotNavItem.style.display = "block";
+          // Get the user's name and display it in the welcome message
+          const username = await getUsername(user.uid);
+          document.getElementById("usernameDisplay").textContent =
+            username + "!";
+          welcomeMessage.style.display = "block";
+        } else {
+          // User is signed out
+          signUpLink.style.display = "block";
+          signInLink.style.display = "block";
+          iotNavItem.style.display = "none";
+          logoutLink.style.display = "none";
+          welcomeMessage.style.display = "none";
+        }
+      });
+
+      // Add an event listener to the logout button
+      logoutLink.addEventListener("click", function () {
+        firebase
+          .auth()
+          .signOut()
+          .then(() => {
+            // Sign-out successful.
+            window.location.reload();
+          })
+          .catch((error) => {
+            // An error happened.
+            console.error(error);
+          });
+      });
+
+      function getUsername(userId) {
+        return firebase
+          .database()
+          .ref("Users/" + userId)
+          .once("value")
+          .then((snapshot) => {
+            return snapshot.val().username;
+          });
+      }
+
+      document
+        .getElementById("submit")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var subj = document.getElementById("subject").value;
+          var msg = document.getElementById("message").value;
+
+          if (name && email && subj && msg) {
+            database.ref("messages/" + name).set({
+              email: email,
+              subject: subj,
+              message: msg,
+            });
+            // Clear the form after successful submission
+            document.getElementById("contactForm").reset();
+          } else {
+            alert("Please fill in all the fields.");
+          }
+        });
+    </script>
+  </body>
+</html>

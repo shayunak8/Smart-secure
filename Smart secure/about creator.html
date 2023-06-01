@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html style="background-color: #c2e5ff">
+  <head>
+    <title>About creator</title>
+    <link rel="icon" type="image/x-icon" href="img/camicon.png" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/title.css" />
+    <link
+      rel="stylesheet"
+      href="https://static.npmjs.com/styles.3a3bd68d95c538240725.css"
+    />
+  </head>
+  <center>
+    <body style="background-color: #c2e5ff">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">Smart secure</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                The site <span class="caret"></span
+              ></a>
+              <ul class="dropdown-menu">
+                <li><a href="about the site.html">About the site</a></li>
+                <li class="active">
+                  <a href="about creator.html">About creator</a>
+                </li>
+                <li><a href="contact.html">Contact creator</a></li>
+              </ul>
+            </li>
+            <li id="iotNavItem"><a href="IOT.html">IOT</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a id="clock"></a></li>
+            <script>
+              startTime();
+              function startTime() {
+                const today = new Date();
+                let h = today.getHours();
+                let m = today.getMinutes();
+                let s = today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById("clock").innerHTML =
+                  h + ":" + m + ":" + s;
+                setTimeout(startTime, 1000);
+              }
+              function checkTime(i) {
+                if (i < 10) {
+                  i = "0" + i;
+                } // add zero in front of numbers < 10
+                return i;
+              }
+            </script>
+            <li id="welcomeMessage" style="display: none; font-weight: 900">
+              <a href="#">Welcome <span id="usernameDisplay"></span></a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li id="signUpLink">
+              <a href="sign up.html"
+                ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+              >
+            </li>
+            <li id="signInLink">
+              <a href="sign in.html"
+                ><span class="glyphicon glyphicon-log-in"></span> Sign in</a
+              >
+            </li>
+            <li id="logoutLink" style="display: none">
+              <a href="#"
+                ><span class="glyphicon glyphicon-log-out"></span> Logout</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h1 class="animate-charcter">About Creator</h1>
+          </div>
+        </div>
+      </div>
+      <p style="font-size: 138%">
+        I am Shay, 18 years old, and have completed 12 years of schooling.<br /><br />
+        In high school, I studied physics, computer science, and cyber defense.I
+        am currently a student at Tzemach College in Israel.<br /><br />
+        In college, I am studying for a practical engineer degree in networking
+        and cyber defense and attack.<br /><br />
+        I am about to finish my degree in June 2023 and then I will enlist in
+        the Israel Defense Army.<br /><br />
+        For projects i have done go to my
+        <a href="https://github.com/shayunak8" style="color: #6ba1db"
+          >git hub account</a
+        >. <br /><br />
+        For my linked in account press
+        <a
+          href="https://www.linkedin.com/in/shay-friedman-799192220"
+          style="color: #6ba1db"
+          >here</a
+        >.
+      </p>
+      <br />
+      <p style="font-size: 138%">
+        A sentence I believe in:
+        <i
+          >"Any fool can write code that a computer can understand. Good
+          programmers write code that humans can understand."</i
+        >
+      </p>
+      <div class="_0c4ed431" style="width: 14%">
+        <div class="bac87ec6">
+          <div class="_83938fda">
+            <div class="_33c43af5">
+              <div class="e7114814">
+                <img
+                  src="https://static.npmjs.com/a39ceb9e9ad640f4de8eee094063d890.png"
+                  alt=""
+                  role="presentation"
+                  class="_489835f0"
+                /><img
+                  src="https://static.npmjs.com/ecc2a793db0bd5966246e970f9c9ff5e.png"
+                  alt=""
+                  role="presentation"
+                  class="fe2acb34"
+                /><img
+                  src="https://static.npmjs.com/6bf09f9948c3044dbb2c7ed8b85098dc.png"
+                  alt=""
+                  role="presentation"
+                  class="_8fb7c421"
+                />
+              </div>
+            </div>
+            <img
+              alt=""
+              role="presentation"
+              src="https://static.npmjs.com/c9e19250d48d66f0e9c70c9b3991bbdb.png"
+            />
+          </div>
+        </div>
+      </div>
+      <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+      <script src="/js/auth_status.js"></script>
+    </body>
+  </center>
+</html>
