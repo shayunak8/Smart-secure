@@ -13,11 +13,18 @@ Requirements
 To run and modify the Smart Secure project, ensure that you have the following software and hardware components:
 
 Web browser (e.g., Google Chrome, Mozilla Firefox)
+
 Arduino IDE
+
 ESP32 development board
+
 Camera module compatible with ESP32
+
 HTML, CSS, and JavaScript code editor (e.g., Visual Studio Code, Sublime Text)
+
+
 Installation
+
 Clone the Smart Secure repository to your local machine or download the project's ZIP file from the GitHub repository.
 
 Set up the Arduino IDE and ESP32 development board by following the manufacturer's instructions and guidelines.
